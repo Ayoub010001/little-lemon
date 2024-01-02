@@ -1,11 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import {Header, Main ,Footer} from './components/components'
 
 function App() {
   return (
-    <div className="App">
-      Homepage
-    </div>
+    <>
+      <Header />
+
+      <Main />
+
+      <Footer  />
+    </>
   );
 }
 
