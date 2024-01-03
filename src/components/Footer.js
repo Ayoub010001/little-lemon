@@ -1,5 +1,5 @@
 import React from 'react'
-import largeLogo from '../Assets/little-lemon-large-logo.png';
+import largeLogo from '../Assets/little-lemon-large-logo-w.png';
 import {navigation} from './Nav'
 
 const socialMedia = [
@@ -35,14 +35,14 @@ function Footer() {
         <address>
           <ul>
           <li>Address</li>
-            <li>Email: <a href="/">info@example.com</a></li>
-            <li>Phone: +1 (555) 123-4567</li>
+            <li><a href="/">info@example.com</a></li>
+            <li>+1 (555) 123-4567</li>
           </ul>
         </address>
       </div>
 
       <nav className='footer--social-Media'>
-        <h3>Social M edia Links</h3>
+        <h3>Social Media Links</h3>
         <ul>
           {socialMediaComp}
         </ul>

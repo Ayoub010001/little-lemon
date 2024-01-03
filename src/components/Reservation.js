@@ -2,9 +2,9 @@ import React from 'react'
 
 function Reservation() {
   return (
-    <section>
-        <h1>Reserve Table</h1>
-        <h2>Little Lemon <span>Chicago</span></h2>
+    <section className='reservation--section'>
+        <h1 className='main-title'>Reserve Table</h1>
+        <h2 className='sub-title'>Little Lemon <span>Chicago</span></h2>
         <form>
             <div>
                 <label>Full Name</label>
@@ -40,13 +40,13 @@ function Reservation() {
                 </select>
             </div>
 
-            <div>
+            <div className='textArea'>
                 <label>Additional comments</label>
                 <textarea placeholder='Comment ...'>
                 </textarea>
             </div>
 
-            <button>Reserve table</button>
+            <button className='btn'>Reserve table</button>
         </form>
     </section>
   )

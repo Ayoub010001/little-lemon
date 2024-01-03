@@ -6,9 +6,9 @@ const navigationBar = navigation.map((link)=>(
   <li><a href="/">{link}</a></li>
 ))
 
-function Nav() {
+function Nav({isOpen}) {
   return (
-    <nav>
+    <nav className={`Header--Navigation ${isOpen && 'isOpen'}`}>
       <ul>
       {navigationBar}
       </ul>
