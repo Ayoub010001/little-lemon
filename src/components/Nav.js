@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export const navigation = ["Home","About","Menu","Reservations","Order Online", "Login"];
 
+
+
 const navigationBar = navigation.map((link)=>(
-  <li><a href="/">{link}</a></li>
+  <li><Link to={link === "Home" ? "/": "/reserve-table"}>{link}</Link></li>
 ))
 
 function Nav({isOpen}) {

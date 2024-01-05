@@ -19,34 +19,36 @@ const navigationBar = navigation.map((link)=>(
 function Footer() {
   return (
     <footer>
-      <div className='footer--logo'>
-        <img src={largeLogo} alt="little lemon logo"></img>
-      </div>
+      <div className='footer--container'>
+        <div className='footer--logo'>
+          <img src={largeLogo} alt="little lemon logo"></img>
+        </div>
 
-      <nav className='footer--Navigation'>
-        <h3>Doormat Navigation</h3>
-        <ul>
-          {navigationBar}
-        </ul>
-      </nav>
-
-      <div className='footer--contact'>
-        <h3>Contact</h3>
-        <address>
+        <nav className='footer--Navigation'>
+          <h3>Doormat Navigation</h3>
           <ul>
-          <li>Address</li>
-            <li><a href="/">info@example.com</a></li>
-            <li>+1 (555) 123-4567</li>
+            {navigationBar}
           </ul>
-        </address>
-      </div>
+        </nav>
 
-      <nav className='footer--social-Media'>
-        <h3>Social Media Links</h3>
-        <ul>
-          {socialMediaComp}
-        </ul>
-      </nav>
+        <div className='footer--contact'>
+          <h3>Contact</h3>
+          <address>
+            <ul>
+            <li>Address</li>
+              <li><a href="/">info@example.com</a></li>
+              <li>+1 (555) 123-4567</li>
+            </ul>
+          </address>
+        </div>
+
+        <nav className='footer--social-Media'>
+          <h3>Social Media Links</h3>
+          <ul>
+            {socialMediaComp}
+          </ul>
+        </nav>
+      </div>
 
     </footer>
   )

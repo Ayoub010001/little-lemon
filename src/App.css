@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
 /* #4B5E57 */
 :root{
   --mainGreen: #4B5E57;
@@ -54,19 +54,21 @@ nav ul li a{
 }
 .main-title{
   color: #F4CE14;
-  text-align: center;
   font-family: Karla , sans-serif;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
 }
 
+.text-center{
+  text-align: center;
+}
+
 .sub-title{
   color: #000;
-  text-align: center;
-  font-family: Markazi;
+  font-family: 'Playfair Display', serif;
   font-size: 32px;
-  font-style: normal;
+  font-style: italic;
   font-weight: 500;
   margin-top: -20px;
 }
@@ -106,18 +108,21 @@ form .textArea{
 /* Footer */
 
 footer{
-  max-width: 1024px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
+
   /* font */
   color: #000;
   font-family: Karla;
   font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: capitalize;
   background-color: var(--mainGreen);
+}
+.footer--container{
+  max-width: 1024px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer ul li, footer ul li a {
@@ -125,7 +130,7 @@ footer ul li, footer ul li a {
 }
 
 footer h3{
-  color: #000;
+  color: var(--mainYellow);
   margin-bottom: 10px;
 }
 
@@ -176,13 +181,17 @@ textarea{
   outline: none;
   border: 1px solid #000;
   background: rgba(255, 254, 254, 0.00);
+  font-family: Karla;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 /* inputs >> buttons */
 
 .btn{
-  width: 200px;
-  height: 60px;
+  width: 160px;
+  height: 50px;
   flex-shrink: 0;
   border-radius: 20px;
   background: #F4CE14;
@@ -193,7 +202,7 @@ textarea{
   color: #000;
   text-align: center;
   font-family: Karla;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -206,6 +215,7 @@ textarea{
 .btn:hover, .btn:hover{
   background: #495E57;
   color: white;
+  border: 1px solid white;
 }
 
 /* Responsivity */
@@ -234,14 +244,157 @@ header, footer, form{
     display: block;
   }
 
-  footer{
+  .footer--container{
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding-bottom: 45px;
+    margin-bottom: 45px;
   }
   .footer--Navigation, .footer--contact, .footer--social-Media{
     padding: 1rem 0;
     width: 60%;
   }
+}
+/* font awesome Icons */
+.guestsInput{
+  width: 224px;
+  height: 42px;
+  border-radius: 5px;
+  background-color: var(--bgGray);
+  color: #4B5E57;
+  font-family: Karla;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  /* shadow */
+  box-shadow: 0px 2.44px 2.44px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+}
+.guestsInput > input{
+  width: 145px;
+  box-shadow:none;
+}
+.fa-solid{
+  width: 20px;
+  margin: 0 10px;
+}
+
+/* remove default icons */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator, input[type="time"]::-webkit-calendar-picker-indicator  {
+  margin-right: 10px;
+}
+select{
+  padding-right: 10px;
+}
+
+/* Home page ... */
+
+.full-w{
+  width: 100%;
+}
+.max-container{
+  max-width: 1024px;
+  margin: auto;
+}
+
+.hero--section{
+  height: 400px;
+  background-color: var(--mainGreen);
+}
+
+.main-text{
+  font-family: Karla;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140.625%;
+}
+.hero-main-text{
+  color: #FFF;
+  width: 480px;
+}
+.flex{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 400px;
+}
+.flex > img{
+  position: absolute;
+  bottom: -52px;
+  right: 30px;
+}
+
+.hero-main-text{
+  margin: 20px 0;
+}
+#specials-section{
+  padding: 60px 0;
+}
+.specials-title{
+  font-size: 42px;
+  color: #000;
+  margin: 10px 0 ;
+}
+.flex-nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.SpecialCard{
+  background: var(--bgGray);
+  width: 262px;
+  height: 430px;
+  flex-shrink: 0;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  cursor: pointer;
+}
+.card--img{
+  height: 185px;
+}
+
+.card--desc{
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  font-size: 16px;
+  font-weight: 400;
+  justify-content: space-between;
+}
+.delivery{
+  font-weight: 500;
+}
+
+.card-price{
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--mainYellow);
+}
+.card-title{
+  font-size: 22px;
+  font-weight: 500;
+}
+.card-header{
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Specials */
+.Specials{
+  margin: 28px 0;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
 }
