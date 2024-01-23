@@ -19,7 +19,7 @@ function SpecialCard(props) {
         <p className='card-text'>
           {props.description}
         </p>
-          <p  className='delivery'>Order a delivery <i class="fa-solid fa-truck"></i></p>
+          <p  className='delivery'>Order a delivery <i className="fa-solid fa-truck"></i></p>
       </div>
     </article>
   )

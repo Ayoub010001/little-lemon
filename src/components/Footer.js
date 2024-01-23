@@ -8,12 +8,12 @@ const socialMedia = [
   {name: "Instagram", link: "www."},
 ]
 
-const socialMediaComp = socialMedia.map((media)=>(
-  <li><a href='/'>{media.name}</a></li>
+const socialMediaComp = socialMedia.map((media,index)=>(
+  <li key={index}><a href='/'>{media.name}</a></li>
 ))
 
-const navigationBar = navigation.map((link)=>(
-  <li><a href='/'>{link}</a></li>
+const navigationBar = navigation.map((link, index)=>(
+  <li key={index}><a href='/'>{link}</a></li>
 ))
 
 function Footer() {

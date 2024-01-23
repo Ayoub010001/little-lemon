@@ -6,7 +6,7 @@ export const navigation = ["Home","About","Menu","Reservations","Order Online", 
 
 
 const navigationBar = navigation.map((link)=>(
-  <li><Link to={link === "Home" ? "/": "/reserve-table"}>{link}</Link></li>
+  <li key={link}><Link to={link === "Home" ? "/": "/reserve-table"}>{link}</Link></li>
 ))
 
 function Nav({isOpen}) {

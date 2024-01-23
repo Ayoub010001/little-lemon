@@ -29,8 +29,8 @@ function Specialfood() {
   return (
     <div className='Specials'>
     {
-        specials.map((special)=>(
-            <SpecialCard name={special.name} price={special.price} description={special.description} img={special.img}/>
+        specials.map((special, index)=>(
+            <SpecialCard key={index} name={special.name} price={special.price} description={special.description} img={special.img}/>
         ))
     }
     </div>
