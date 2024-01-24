@@ -398,3 +398,48 @@ select{
   gap: 10px;
   justify-content: space-around;
 }
+
+/*Success Card*/
+
+.SuccessBooking-card{
+  width: 340px;
+  height: 420px;
+  padding: 2rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  top: 10%;
+  left: 35%;
+  position: fixed;
+  background-color: #EDEFEE;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #495e5767;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.SuccessBooking-card img{
+  width: 150px;
+  height: 150px;
+}
+.SuccessBooking-card-title{
+  color: #000;
+  text-align: center;
+  font-family: Karla;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+@keyframes fadeIn {
+  from {
+    top:200%;
+    opacity: 0;
+  }
+  to {
+    top: 10%;
+    opacity: 1;
+  }
+}

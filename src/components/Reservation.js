@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Button} from './components'
+import {Button, SuccessBooking} from './components'
 
 const occasions = ["None","Birthday", "Engagement", "Anniversary"];
 const preferences = ["None","Window seat", "Booth", "Outdoor patio", "Standard table"]
@@ -24,6 +24,9 @@ function Reservation({formData,setFormData, availableTimes, dipatch}) {
     const reserveTimeOptions = availableTimes.map((availableTime)=>(
         <option key={availableTime} value={availableTime}>{availableTime}</option>
     ))
+
+    //is Successed 
+    const [isSuccess, setIsSuccess] = useState(false);
 
     //Guest state
     const [guestCount, setGuestCount] = useState(1);
@@ -55,6 +58,7 @@ function Reservation({formData,setFormData, availableTimes, dipatch}) {
     }
     function handleSubmit(e){
         e.preventDefault();
+        setIsSuccess(()=> true);
         console.log('Form submitted with values:', formData);
     }
 
@@ -65,8 +69,8 @@ function Reservation({formData,setFormData, availableTimes, dipatch}) {
         <h2 className='text-center sub-title'>Little Lemon <span>Chicago</span></h2>
         <form onSubmit={handleSubmit}>
             <div>
-                <label>Full Name</label>
-                <input name="fullName" type={"text"} value={formData.fullName} onChange={handleChange}></input>
+                <label htmlFor="fullName">Full Name</label>
+                <input id="fullName" name="fullName" type={"text"} value={formData.fullName} onChange={handleChange}></input>
             </div>
 
             <div>
@@ -112,6 +116,9 @@ function Reservation({formData,setFormData, availableTimes, dipatch}) {
 
             <Button content="Reserve table"/>
         </form>
+        {
+            isSuccess && <SuccessBooking setIsSuccess={setIsSuccess}/>
+        }
     </section>
   )
 }
