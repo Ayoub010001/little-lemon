@@ -70,52 +70,53 @@ function Reservation({formData,setFormData, availableTimes, dipatch}) {
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="fullName">Full Name</label>
-                <input id="fullName" name="fullName" type={"text"} value={formData.fullName} onChange={handleChange}></input>
+                <input id="fullName" name="fullName" type={"text"} value={formData.fullName} onChange={handleChange} required minLength={3} placeholder="Enter your Name"></input>
             </div>
 
             <div>
-                <label>Guests</label>
+                <label htmlFor="guests">Guests</label>
                 <div className='guestsInput'>
                     <i className="fa-solid fa-plus" onClick={increment}></i>
-                    <input name='guests' type={"number"} min={1} value={guestCount} onChange={handleChange}></input>
+                    <input id="guests" name='guests' type={"number"} min={1} value={guestCount} onChange={handleChange}></input>
                     <i className="fa-solid fa-minus" onClick={decrement}></i>
                 </div>
             </div>
 
             <div>
-                <label>Date</label>
-                <input name='date' type={"date"}  min={formattedDate} value={formData.date} onChange={handleChange} required></input>
+                <label htmlFor="date">Date</label>
+                <input id='date' name='date' type={"date"}  min={formattedDate} value={formData.date} onChange={handleChange} required></input>
             </div>
 
             <div>
-                <label>Choose Time</label>
-                <select name='time' value={formData.time} onChange={handleChange}>
+                <label htmlFor='time'>Choose Time</label>
+                <select id='time' name='time' value={formData.time} onChange={handleChange}>
                   {reserveTimeOptions}
                 </select>
             </div>
 
             <div>
-                <label>Occasion</label>
-                <select name='occasion' value={formData.occasion} onChange={handleChange}>
+                <label htmlFor='occasion'>Occasion</label>
+                <select id='occasion' name='occasion' value={formData.occasion} onChange={handleChange}>
                   {occasionOptions}
                 </select>
             </div>
 
             <div>
-                <label>Sitting preferences</label>
-                <select name='prefs' value={formData.prefs} onChange={handleChange}>
+                <label htmlFor='prefs'>Sitting preferences</label>
+                <select id='prefs' name='prefs' value={formData.prefs} onChange={handleChange}>
                   {preferencesOptions}
                 </select>
             </div>
 
             <div className='textArea'>
-                <label>Additional comments</label>
-                <textarea placeholder='Comment ...' name='comment' value={formData.comment} onChange={handleChange}>
+                <label htmlFor='comment'>Additional comments</label>
+                <textarea placeholder='Comment ...' id='comment' name='comment' value={formData.comment} onChange={handleChange}>
                 </textarea>
             </div>
 
             <Button content="Reserve table"/>
         </form>
+
         {
             isSuccess && <SuccessBooking setIsSuccess={setIsSuccess}/>
         }

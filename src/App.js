@@ -1,6 +1,6 @@
 import './App.css';
 import {ReservePage, HomePage} from './pages/pages'
-import {Header, Footer} from './components/components'
+import {Header, Footer, CopyRights} from './components/components'
 import { BrowserRouter ,Route ,Routes } from 'react-router-dom';
 
 function App() {
@@ -15,6 +15,8 @@ function App() {
           </Routes>
 
           <Footer  />
+          <CopyRights />
+
       </BrowserRouter>
     </>
   );

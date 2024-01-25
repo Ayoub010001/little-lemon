@@ -10,7 +10,7 @@ function Button(props) {
 
   return (
     <>
-      {props.setIsSuccess ? <button className='btn' onClick = {handleContinue}>{props.content}</button> : <button className='btn'>{props.content}</button>}
+      {props.setIsSuccess ? <button className='btn' onClick = {handleContinue} aria-label="On Click">{props.content}</button> : <button className='btn' aria-label="On Click">{props.content}</button>}
     </>
   )
 }

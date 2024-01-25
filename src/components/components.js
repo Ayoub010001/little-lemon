@@ -11,6 +11,7 @@ import Button from './Button'
 import Specialfood from './Specialfood'
 import SpecialCard from './SpecialCard'
 import SuccessBooking from './SuccessBooking'
+import CopyRights from './CopyRights'
 
 
-export {Header, Nav, Main, Banner, Reservation, Footer, Humberger, HeroSection, Specials, Button, Specialfood, SpecialCard, SuccessBooking};
+export {Header, Nav, Main, Banner, Reservation, Footer, Humberger, HeroSection, Specials, Button, Specialfood, SpecialCard, SuccessBooking, CopyRights};
